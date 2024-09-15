@@ -1629,7 +1629,7 @@ dl_main (const ElfW(Phdr) *phdr,
       newname.next = NULL;
       newname.dont_free = 1;
 
-      char *ldso_prefix = "/lib/ld-linux-riscv";
+      const char *ldso_prefix = "/lib/ld-linux-riscv";
       if (strncmp (GL(dl_rtld_map).l_libname->name, ldso_prefix, strlen(ldso_prefix)) == 0)
 	{
 	  static struct libname_list ldso_compitiable;
